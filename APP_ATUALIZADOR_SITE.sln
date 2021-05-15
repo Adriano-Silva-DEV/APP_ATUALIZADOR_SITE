@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APP_ATUALIZADOR_SITE", "APP_ATUALIZADOR_SITE\APP_ATUALIZADOR_SITE.csproj", "{426E703A-617D-4073-9A9A-57B1CE3310EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{426E703A-617D-4073-9A9A-57B1CE3310EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{426E703A-617D-4073-9A9A-57B1CE3310EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{426E703A-617D-4073-9A9A-57B1CE3310EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{426E703A-617D-4073-9A9A-57B1CE3310EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E45444CC-8827-4CC6-AEE6-38DCC7B235BD}
+	EndGlobalSection
+EndGlobal
