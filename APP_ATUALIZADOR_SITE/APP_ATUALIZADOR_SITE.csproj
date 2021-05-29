@@ -12,6 +12,11 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,25 +38,44 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.5.2.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bd\ConectorBD.cs" />
+    <Compile Include="bd\ConectorSQLITE.cs" />
+    <Compile Include="classes\ProdutoAtualizador.cs" />
+    <Compile Include="classes\ConsomeApi.cs" />
+    <Compile Include="classes\MetaProdutoResponse.cs" />
+    <Compile Include="classes\ObjectsProdutoResponse.cs" />
+    <Compile Include="classes\ProdutoResponse.cs" />
+    <Compile Include="classes\RespostaJson.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="classes\IProdutoApiInterface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -79,5 +103,95 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client">
+      <Version>5.2.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>6.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Refit">
+      <Version>6.0.38</Version>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.bundle_winsqlite3">
+      <Version>2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.core">
+      <Version>2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.provider.winsqlite3">
+      <Version>2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Stub.System.Data.SQLite.Core.NetFramework">
+      <Version>1.0.113.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Buffers">
+      <Version>4.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite">
+      <Version>1.0.113.7</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.Core">
+      <Version>1.0.113.7</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.EF6">
+      <Version>1.0.113</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.Linq">
+      <Version>1.0.113</Version>
+    </PackageReference>
+    <PackageReference Include="System.IO">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Memory">
+      <Version>4.5.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http.Json">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Numerics.Vectors">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Algorithms">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Encoding">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Primitives">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.X509Certificates">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encodings.Web">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json">
+      <Version>5.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.5.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>4.5.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

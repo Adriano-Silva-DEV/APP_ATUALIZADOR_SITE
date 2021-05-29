@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using APP_ATUALIZADOR_SITE.classes;
+using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace APP_ATUALIZADOR_SITE
@@ -14,9 +13,11 @@ namespace APP_ATUALIZADOR_SITE
         [STAThread]
         static void Main()
         {
+            Thread threadAtualizador = new Thread(ProdutoAtualizador.Execute);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1(threadAtualizador));
         }
     }
 }
