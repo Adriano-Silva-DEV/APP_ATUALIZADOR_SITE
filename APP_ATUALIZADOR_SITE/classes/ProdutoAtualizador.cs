@@ -31,14 +31,14 @@ namespace APP_ATUALIZADOR_SITE.classes
         {
 
           // var w = RecebeProdutos();
-          //  new ProdutoAtualizador().EnviaPrecoProduto(12122, 12222, 39919599);
-          // new ProdutoAtualizador().EnviaEstoqueProduto(223, 00001);
+          //  new ProdutoAtualizador().EnviaPrecoProduto(1369, 36222, 39919599);
+           // new ProdutoAtualizador().EnviaEstoqueProduto(223, 00001);
 
              var produto = new ObjectsProdutoResponse();
-             produto.Nome = "s1tetesathata";
-             produto.CodBarras = ;
-             produto.Sku = "16998";
-             produto.Id_externo = 66559998;
+             produto.Nome = "Produto Teste";
+             produto.CodBarras = 2556365;
+             produto.Sku =  "122222112";
+             produto.Id_externo = 323456821;
 
             new ProdutoAtualizador().EnviaProduto(produto);
 
@@ -87,11 +87,22 @@ namespace APP_ATUALIZADOR_SITE.classes
                 {
 
 
-                    using (var content = new StringContent("{  \"id_externo\": " + produto.Id_externo + ", \"sku\": " + produto.Sku + ", " +
-                        "\"mpn\": null, \"ncm\": null, \"gtin\": " + produto.CodBarras + ", \"nome\": \" " + produto.Nome + " \", " +
-                        "\"descricao_completa\": \"\", \"ativo\": false,\"destaque\": false,\"peso\": 0.45," +
-                        "\"altura\": 2, \"largura\": 12,\"profundidade\": 6, \"tipo\": \"normal\", \"usado\": false," +
-                        "\"removido\": false }", System.Text.Encoding.Default, "application/json"))
+                    using (var content = new StringContent("{ \"id_externo\": "+produto.Id_externo+"," +
+                        "             \"sku\": \""+produto.Sku+"\"," +
+                        "            \"mpn\": null," +
+                        "            \"ncm\": null," +
+                        "            \"gtin\": "+produto.CodBarras+"," +
+                        "            \"nome\": \" "+produto.Nome+" \"," +
+                        "            \"descricao_completa\": \"\"," +
+                        "            \"ativo\": false," +
+                        "            \"destaque\": false," +
+                        "            \"peso\": 0.45," +
+                        "            \"altura\": 2," +
+                        "            \"largura\": 12," +
+                        "            \"profundidade\": 6," +
+                        "            \"tipo\": \"normal\"," +
+                        "            \"usado\": false," +
+                        "            \"removido\": false}", System.Text.Encoding.Default, "application/json"))
 
                     {
 
@@ -102,7 +113,8 @@ namespace APP_ATUALIZADOR_SITE.classes
                             MessageBox.Show(responseData);
                             RespostaJson json = JsonConvert.DeserializeObject<RespostaJson>(responseData);
 
-                            if (json.error != null)
+                            if (json.error.produto)
+                                aquiiiiiiiiii!!!!!
                             {
                                 MessageBox.Show(json.error.produto);
                             }
